@@ -14,5 +14,6 @@ There are suffixes but only upto Novendecillion. If your number is larger than N
 ## BigOper class methods:
 - public ArrayList<String> addition(ArrayList<String> num1, ArrayList<String> num2)
 - public ArrayList<String> subtraction(ArrayList<String> num1, ArrayList<String> num2)
-  
+## Note:
+I only coded for POSITIVE numbers.
 I have NOT coded division and multiplication.
