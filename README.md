@@ -17,5 +17,7 @@ There are suffixes but only upto Novendecillion. If your number is larger than N
 - public ArrayList<String> multiplication(ArrayList<String> num1, ArrayList<String> num2)
 - public ArrayList<String> division(ArrayList<String> num1, ArrayList<String> num2)
   - public ArrayList<String> returnR()
+## Warning:
+You should use another object for division and returnR methods.
 ## Note:
 There are methods to check which one is bigger and they are equal or not.
