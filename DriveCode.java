@@ -23,26 +23,27 @@ public class DriveCode
         //Create big operator
         BigOper bo = new BigOper();
 
-//        //Create bn3
-//        System.out.println();
-//        System.out.println("Subtraction of them (Bigger number will subtract smaller one): ");
-//        BigNum bn3 = new BigNum();
-//        bn3.setNumber(bo.subtraction(bn1.getNumber(),bn2.getNumber()));
-//        bn3.displayNumber();
-//
-//        //Create bn4
-//        System.out.println();
-//        System.out.println("Addition of them: ");
-//        BigNum bn4 = new BigNum();
-//        bn4.setNumber(bo.addition(bn1.getNumber(),bn2.getNumber()));
-//        bn4.displayNumber();
-//
-//        //Create bn5
-//        System.out.println();
-//        System.out.println("Multiplication of them: ");
-//        BigNum bn5 = new BigNum();
-//        bn5.setNumber(bo.multiplication(bn1.getNumber(),bn2.getNumber()));
-//        bn5.displayNumber();
+        //Create bn3
+        System.out.println();
+        System.out.println("Subtraction of them (Bigger number will subtract smaller one): ");
+        BigNum bn3 = new BigNum();
+        bn3.setNumber(bo.subtraction(bn1.getNumber(),bn2.getNumber()));
+        bn3.displayNumber();
+
+        //Create bn4
+        System.out.println();
+        System.out.println("Addition of them: ");
+        BigNum bn4 = new BigNum();
+        bn4.setNumber(bo.addition(bn1.getNumber(),bn2.getNumber()));
+        bn4.displayNumber();
+
+        //Create bn5
+        System.out.println();
+        System.out.println("Multiplication of them: ");
+        BigNum bn5 = new BigNum();
+        bn5.setNumber(bo.multiplication(bn1.getNumber(),bn2.getNumber()));
+        bn5.displayNumber();
+
 
         //Create bn6
         System.out.println();

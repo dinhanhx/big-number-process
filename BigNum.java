@@ -12,9 +12,9 @@ public class BigNum
     }
 
     //Getter and setter for ArrayList<String> number
-    public void setNumber(ArrayList<String> number)
+    public void setNumber(ArrayList<String> num)
     {
-        this.number = number;
+        number = (ArrayList<String>) num.clone();
     }
 
     public ArrayList<String> getNumber()

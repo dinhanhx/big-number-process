@@ -3,9 +3,11 @@ import java.util.ArrayList;
 public class BigOper
 {
 
-    public ArrayList<String> addition(ArrayList<String> num1, ArrayList<String> num2)
+    public ArrayList<String> addition(ArrayList<String> numA, ArrayList<String> numB)
     {
         ArrayList<String> outputNumber = new ArrayList<String>();
+        ArrayList<String> num1 = new ArrayList<String>(numA);
+        ArrayList<String> num2 = new ArrayList<String>(numB);
         int n;
         if (num1.size() >= num2.size())
         {
@@ -61,9 +63,11 @@ public class BigOper
         }
         return outputNumber;
     }
-    public ArrayList<String> subtraction (ArrayList<String> num1, ArrayList<String> num2)
+    public ArrayList<String> subtraction (ArrayList<String> numA, ArrayList<String> numB)
     {
         ArrayList<String> outputNumber = new ArrayList<String>();
+        ArrayList<String> num1 = new ArrayList<String>(numA);
+        ArrayList<String> num2 = new ArrayList<String>(numB);
         int n = 0;
         boolean num1_is_bigger_than_num2 = false;
         boolean num1_is_equal_num2 = false;
@@ -188,9 +192,11 @@ public class BigOper
 
         return outputNumber;
     }
-    public ArrayList<String> multiplication(ArrayList<String> num1, ArrayList<String> num2)
+    public ArrayList<String> multiplication(ArrayList<String> numA, ArrayList<String> numB)
     {
         ArrayList<String> outputNumber = new ArrayList<String>();
+        ArrayList<String> num1 = new ArrayList<String>(numA);
+        ArrayList<String> num2 = new ArrayList<String>(numB);
         outputNumber.add("0");
         int n = 0;
 
@@ -220,7 +226,6 @@ public class BigOper
         if (num1.size() > num2.size())
         { 
             num1_is_bigger_than_num2 = true;
-            
         }
         else
         {
@@ -285,9 +290,11 @@ public class BigOper
         return isEqual;
     }
     
-    public ArrayList<String> division(ArrayList<String> num1, ArrayList<String> num2)
+    public ArrayList<String> division(ArrayList<String> numA, ArrayList<String> numB)
     {
         ArrayList<String> outputNumber = new ArrayList<String>();
+        ArrayList<String> num1 = new ArrayList<String>(numA);
+        ArrayList<String> num2 = new ArrayList<String>(numB);
         ArrayList<String> R = new ArrayList<String>();
         ArrayList<String> addOne = new ArrayList<String>();
         addOne.add("1");
@@ -295,17 +302,17 @@ public class BigOper
         else
         {
             outputNumber.add("0");
-            if (comparator(num1,num2) == true)
+            if (comparator(num1, num2) == true)
             {
                 while(true)
                 {
                     if (comparator(num2,subtraction(num1,multiplication(outputNumber,num2))) == true)
                     {
                         R = subtraction(num1,multiplication(outputNumber,num2));
-                        System.out.println(R);
                         break;
                     }
                     outputNumber = addition(outputNumber,addOne);
+
                 }
             }
             else
