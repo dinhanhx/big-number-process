@@ -19,5 +19,3 @@ There are suffixes but only upto Novendecillion. If your number is larger than N
   - public ArrayList<String> returnR()
 ## Note:
 There are methods to check which one is bigger and they are equal or not.
-## To do list:
-- Make divsion method run faster and more efficiently
