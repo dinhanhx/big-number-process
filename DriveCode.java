@@ -47,7 +47,7 @@ public class DriveCode
 
 
         // Division -  quotient
-        System.out.print(X1isBigger ? "X1 - X2 =  " : "X2 - X1 =  " );
+        System.out.print(X1isBigger ? "X1 / X2 =  " : "X2 / X1 =  " );
         BigNum quotient = new BigNum();
         quotient.setNumber(BigOper.division(X1.getNumber(),X2.getNumber()));
         quotient.displayNumber();

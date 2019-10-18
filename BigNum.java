@@ -2,12 +2,11 @@ import java.util.ArrayList;
 public class BigNum
 {
     private String numtxt;
-    private String[] suffix;
+    final static private String[] suffix = new String[] {"Unit", "Thousand", "Million", "Billion", "Trillion", "Quadrillion", "Quintillion", "Sextillion", "Septillion", "Octillion", "Decillion", "Undecillion", "Duodecillion", "Tredecillion", "Quattuordecillion", "Quinquadecillion", "Sedecillion", "Octodecillion", "Novendecillion"};
     private ArrayList<String> number;
 
     public BigNum()
     {
-        suffix = new String[] {"Unit", "Thousand", "Million", "Billion", "Trillion", "Quadrillion", "Quintillion", "Sextillion", "Septillion", "Octillion", "Decillion", "Undecillion", "Duodecillion", "Tredecillion", "Quattuordecillion", "Quinquadecillion", "Sedecillion", "Octodecillion", "Novendecillion"};
         number = new ArrayList<String>();
     }
 
@@ -34,12 +33,11 @@ public class BigNum
     public void processNumtxt()
     {
         //Create size for ArrayList<String> number
-        int n;
+        int n = (numtxt.length() / 3);
         if (numtxt.length() % 3 != 0)
         {
-            n = (numtxt.length() / 3) + 1;
+            n++;
         }
-        else n = (numtxt.length() / 3);
 
         //Create an inverse string of numtxt
         String numtxtInv = "";
