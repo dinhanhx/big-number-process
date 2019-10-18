@@ -55,7 +55,7 @@ public class DriveCode
         // Remainer -  remainder
         System.out.print("remainder = ");
         BigNum remainder = new BigNum();
-        remainder.setNumber(BigOper.returnR());
+        remainder.setNumber(BigOper.returnRemainder());
         remainder.displayNumber();
     }
 }

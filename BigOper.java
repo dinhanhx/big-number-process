@@ -333,7 +333,7 @@ public class BigOper
     }
     static private ArrayList<String> remainder = new ArrayList<String>();
 
-    static public ArrayList<String> returnR()
+    static public ArrayList<String> returnRemainder()
     {
         return remainder;
     }
