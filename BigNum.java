@@ -11,10 +11,14 @@ public class BigNum
         number = new ArrayList<String>();
     }
 
+    public BigNum(String numtxt) {
+        setNumtxt(numtxt);
+    }
+
     //Getter and setter for ArrayList<String> number
     public void setNumber(ArrayList<String> num)
     {
-        number = (ArrayList<String>) num.clone();
+        number = (ArrayList<String>) num.clone(); //FIXME: This cause a Warning: unchecked cast
     }
 
     public ArrayList<String> getNumber()
@@ -33,9 +37,9 @@ public class BigNum
         int n;
         if (numtxt.length() % 3 != 0)
         {
-            n = (int) (numtxt.length() / 3) + 1;
+            n = (numtxt.length() / 3) + 1;
         }
-        else n = (int) (numtxt.length() / 3);
+        else n = (numtxt.length() / 3);
 
         //Create an inverse string of numtxt
         String numtxtInv = "";
@@ -79,7 +83,7 @@ public class BigNum
             {
                 System.out.print(number.get(i) + ",");
             }
-            else System.out.print(number.get(i) + ".");
+            else System.out.print(number.get(i) + "\n");
         }
     }
     public void displayNumberExtra()

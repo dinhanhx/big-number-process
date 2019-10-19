@@ -5,58 +5,57 @@ public class DriveCode
     {
         Scanner userInput = new Scanner(System.in);
 
-        //Create bn1
+        // Input X1
         System.out.println("Input a very big positive number: ");
+        System.out.print("X1 = ");
         String numtxt1 = userInput.nextLine();
-        BigNum bn1 = new BigNum();
-        bn1.setNumtxt(numtxt1);
-        bn1.displayNumber();
+        BigNum X1 = new BigNum();
+        X1.setNumtxt(numtxt1);
 
-        //Create bn2
-        System.out.println();
+        // Input X2
         System.out.println("Input ANOTHER very big positive number: ");
+        System.out.print("X2 = ");
         String numtxt2 = userInput.nextLine();
-        BigNum bn2 = new BigNum();
-        bn2.setNumtxt(numtxt2);
-        bn2.displayNumber();
+        BigNum X2 = new BigNum();
+        X2.setNumtxt(numtxt2);
 
-        //Create big operator
-        BigOper bo = new BigOper();
+        System.out.println("-----\nOperations using these parameters");
+        System.out.print("X1 = ");
+        X1.displayNumber();
+        System.out.print("X2 = ");
+        X2.displayNumber();
 
-        //Create bn3
-        System.out.println();
-        System.out.println("Subtraction of them (Bigger number will subtract smaller one): ");
-        BigNum bn3 = new BigNum();
-        bn3.setNumber(bo.subtraction(bn1.getNumber(),bn2.getNumber()));
-        bn3.displayNumber();
+        boolean X1isBigger = BigOper.comparator(X1.getNumber(), X2.getNumber());
 
-        //Create bn4
-        System.out.println();
-        System.out.println("Addition of them: ");
-        BigNum bn4 = new BigNum();
-        bn4.setNumber(bo.addition(bn1.getNumber(),bn2.getNumber()));
-        bn4.displayNumber();
+        // Addition
+        System.out.print("X1 + X2 = ");
+        BigNum sum = new BigNum();
+        sum.setNumber(BigOper.addition(X1.getNumber(),X2.getNumber()));
+        sum.displayNumber();
 
-        //Create bn5
-        System.out.println();
-        System.out.println("Multiplication of them: ");
-        BigNum bn5 = new BigNum();
-        bn5.setNumber(bo.multiplication(bn1.getNumber(),bn2.getNumber()));
-        bn5.displayNumber();
+        // Substraction
+        System.out.print(X1isBigger ? "X1 - X2 =  " : "X2 - X1 =  " );
+        BigNum difference = new BigNum();
+        difference.setNumber(BigOper.subtraction(X1.getNumber(),X2.getNumber()));
+        difference.displayNumber();
+
+        // Multiplication
+        System.out.print("X1 * X2 =  ");
+        BigNum product = new BigNum();
+        product.setNumber(BigOper.multiplication(X1.getNumber(),X2.getNumber()));
+        product.displayNumber();
 
 
-        //Create bn6
-        System.out.println();
-        System.out.println("Division of them: ");
-        BigNum bn6 = new BigNum();
-        bn6.setNumber(bo.division(bn1.getNumber(),bn2.getNumber()));
-        bn6.displayNumber();
+        // Division
+        System.out.print(X1isBigger ? "X1 - X2 =  " : "X2 - X1 =  " );
+        BigNum quotient = new BigNum();
+        quotient.setNumber(BigOper.division(X1.getNumber(),X2.getNumber()));
+        quotient.displayNumber();
 
-        //Create bn7
-        System.out.println();
-        System.out.println("R: ");
-        BigNum bn7 = new BigNum();
-        bn7.setNumber(bo.returnR());
-        bn7.displayNumber();
+        // Remainder
+        System.out.print("remainder = ");
+        BigNum remainder = new BigNum();
+        remainder.setNumber(BigOper.returnRemainder());
+        remainder.displayNumber();
     }
 }

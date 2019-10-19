@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class BigOper
 {
 
-    public ArrayList<String> addition(ArrayList<String> numA, ArrayList<String> numB)
+    static public ArrayList<String> addition(ArrayList<String> numA, ArrayList<String> numB)
     {
         ArrayList<String> outputNumber = new ArrayList<String>();
         ArrayList<String> num1 = new ArrayList<String>(numA);
@@ -63,7 +63,7 @@ public class BigOper
         }
         return outputNumber;
     }
-    public ArrayList<String> subtraction (ArrayList<String> numA, ArrayList<String> numB)
+    static public ArrayList<String> subtraction (ArrayList<String> numA, ArrayList<String> numB)
     {
         ArrayList<String> outputNumber = new ArrayList<String>();
         ArrayList<String> num1 = new ArrayList<String>(numA);
@@ -192,7 +192,7 @@ public class BigOper
 
         return outputNumber;
     }
-    public ArrayList<String> multiplication(ArrayList<String> numA, ArrayList<String> numB)
+    static public ArrayList<String> multiplication(ArrayList<String> numA, ArrayList<String> numB)
     {
         ArrayList<String> outputNumber = new ArrayList<String>();
         ArrayList<String> num1 = new ArrayList<String>(numA);
@@ -220,7 +220,7 @@ public class BigOper
         return outputNumber;
     }
     
-    public boolean comparator(ArrayList<String> num1, ArrayList<String> num2)
+    static public boolean comparator(ArrayList<String> num1, ArrayList<String> num2)
     {
         boolean num1_is_bigger_than_num2 = false;
         if (num1.size() > num2.size())
@@ -258,7 +258,7 @@ public class BigOper
         return num1_is_bigger_than_num2;
     }
 
-    public boolean equalChecker(ArrayList<String> num1, ArrayList<String> num2)
+    static public boolean equalChecker(ArrayList<String> num1, ArrayList<String> num2)
     {
         boolean isEqual = false;
         if (num1.size() == num2.size())
@@ -290,7 +290,7 @@ public class BigOper
         return isEqual;
     }
     
-    public ArrayList<String> division(ArrayList<String> numA, ArrayList<String> numB)
+    static public ArrayList<String> division(ArrayList<String> numA, ArrayList<String> numB)
     {
         ArrayList<String> outputNumber = new ArrayList<String>();
         ArrayList<String> num1 = new ArrayList<String>(numA);
@@ -328,16 +328,13 @@ public class BigOper
                 }
             }
         }
-        receiveR(R);
+        remainder = R;
         return outputNumber;
     }
-    private ArrayList<String> R = new ArrayList<String>();
-    private void receiveR(ArrayList<String> R)
+    static private ArrayList<String> remainder = new ArrayList<String>();
+
+    static public ArrayList<String> returnRemainder()
     {
-        this.R = R;
-    }
-    public ArrayList<String> returnR()
-    {
-        return R;
+        return remainder;
     }
 }
