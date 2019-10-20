@@ -45,7 +45,6 @@ public class DriveCode
         product.setNumber(BigOper.multiplication(X1.getNumber(),X2.getNumber()));
         product.displayNumber();
 
-
         // Division
         System.out.print(X1isBigger ? "X1 - X2 =  " : "X2 - X1 =  " );
         BigNum quotient = new BigNum();
