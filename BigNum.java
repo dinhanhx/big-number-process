@@ -17,7 +17,9 @@ public class BigNum
     //Getter and setter for ArrayList<String> number
     public void setNumber(ArrayList<String> num)
     {
-        number = (ArrayList<String>) num.clone(); //FIXME: This cause a Warning: unchecked cast
+        for (int i = 0; i < num.size(); ++i) {
+            number.add(num.get(i))
+        }
     }
 
     public ArrayList<String> getNumber()
